@@ -6,7 +6,7 @@
 
 public class PlayWithInheritance
 {
-	public static int RUN_EXAMPLE = 1; // change this to try different behaviors
+	public static int RUN_EXAMPLE = 7; // change this to try different behaviors
 										// below
 
 	public static void main(String[] args)
@@ -90,6 +90,12 @@ public class PlayWithInheritance
 
 			StdOut.printf("Roll of '%s' and '%s' is: %d.\n", aSingleDie, crooked1, result);
 		}
+		else if (RUN_EXAMPLE == 7)
+		{
+			Die die = new CrookedDie1();
+			
+			StdOut.println(die.testStatic());
+		}
 
 		StdOut.println();
 	}
@@ -102,6 +108,7 @@ public class PlayWithInheritance
 	 * @param toDescribe
 	 */
 
+	
 	public static void describe(String msg, Die toDescribe)
 	{
 		StdOut.printf("%s '%s' \n", msg, toDescribe.toString());
